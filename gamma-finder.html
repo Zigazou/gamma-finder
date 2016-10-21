@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gamma finder</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      #screen, #color {
+        position: fixed;
+        width: 50%; height: 100%; top: 0;
+      }
+
+      #screen { left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQMAAAD58POIAAAABlBMVEUAAAD///+l2Z/dAAAAJElEQVRIx2NYhQYYQtEAw6iKURWjKkZVjKoYVTGqYlQFVVUAAFE1/C5i2GWPAAAAAElFTkSuQmCC')
+; }
+      #color { right: 0; }
+
+      .gamma10 { background-color: rgb(128, 128, 128); }
+      .gamma11 { background-color: rgb(136, 136, 136); }
+      .gamma12 { background-color: rgb(144, 144, 144); }
+      .gamma13 { background-color: rgb(150, 150, 150); }
+      .gamma14 { background-color: rgb(156, 156, 156); }
+      .gamma15 { background-color: rgb(161, 161, 161); }
+      .gamma16 { background-color: rgb(166, 166, 166); }
+      .gamma17 { background-color: rgb(170, 170, 170); }
+      .gamma18 { background-color: rgb(174, 174, 174); }
+      .gamma19 { background-color: rgb(178, 178, 178); }
+      .gamma20 { background-color: rgb(181, 181, 181); }
+      .gamma21 { background-color: rgb(184, 184, 184); }
+      .gamma22 { background-color: rgb(187, 187, 187); }
+      .gamma23 { background-color: rgb(189, 189, 189); }
+      .gamma24 { background-color: rgb(192, 192, 192); }
+      .gamma25 { background-color: rgb(194, 194, 194); }
+      .gamma26 { background-color: rgb(196, 196, 196); }
+      .gamma27 { background-color: rgb(198, 198, 198); }
+      .gamma28 { background-color: rgb(200, 200, 200); }
+      .gamma29 { background-color: rgb(202, 202, 202); }
+      .gamma30 { background-color: rgb(203, 203, 203); }
+
+      #switch {
+        position: fixed;
+        width: 5em; right: 0;
+      }
+
+      button {
+        width: 100%;
+        border: none;
+        font-size: 150%;
+        font-weight: bold;
+        line-height: 150%;
+      }
+
+      #help {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        background-color: white;
+        font-family: sans-serif;
+        line-height: 200%;
+      }
+    </style>
+    <script>
+      function changeColor(element) {
+        document.getElementById("color").className = element.className;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="screen"></div>
+    <div id="color"></div>
+    <div id="switch">
+      <div><button class="gamma10" onclick="changeColor(this)">1.0</button></div>
+      <div><button class="gamma11" onclick="changeColor(this)">1.1</button></div>
+      <div><button class="gamma12" onclick="changeColor(this)">1.2</button></div>
+      <div><button class="gamma13" onclick="changeColor(this)">1.3</button></div>
+      <div><button class="gamma14" onclick="changeColor(this)">1.4</button></div>
+      <div><button class="gamma15" onclick="changeColor(this)">1.5</button></div>
+      <div><button class="gamma16" onclick="changeColor(this)">1.6</button></div>
+      <div><button class="gamma17" onclick="changeColor(this)">1.7</button></div>
+      <div><button class="gamma18" onclick="changeColor(this)">1.8</button></div>
+      <div><button class="gamma19" onclick="changeColor(this)">1.9</button></div>
+      <div><button class="gamma20" onclick="changeColor(this)">2.0</button></div>
+      <div><button class="gamma21" onclick="changeColor(this)">2.1</button></div>
+      <div><button class="gamma22" onclick="changeColor(this)">2.2</button></div>
+      <div><button class="gamma23" onclick="changeColor(this)">2.3</button></div>
+      <div><button class="gamma24" onclick="changeColor(this)">2.4</button></div>
+      <div><button class="gamma25" onclick="changeColor(this)">2.5</button></div>
+      <div><button class="gamma26" onclick="changeColor(this)">2.6</button></div>
+      <div><button class="gamma27" onclick="changeColor(this)">2.7</button></div>
+      <div><button class="gamma28" onclick="changeColor(this)">2.8</button></div>
+      <div><button class="gamma29" onclick="changeColor(this)">2.9</button></div>
+      <div><button class="gamma30" onclick="changeColor(this)">3.0</button></div>
+    </div>
+    <div id="help">Click on a gamma number until the intensity of left and right are the same</div>
+  </body>
+</html>
